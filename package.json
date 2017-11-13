@@ -1,0 +1,28 @@
+{
+  "name": "stat_calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ikamari/stat_calculator.git"
+  },
+  "author": "Ikamari",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ikamari/stat_calculator/issues"
+  },
+  "homepage": "https://github.com/Ikamari/stat_calculator#readme",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "webpack": "^3.7.1"
+  }
+}

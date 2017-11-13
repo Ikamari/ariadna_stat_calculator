@@ -1,0 +1,57 @@
+.calculator {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: solid rebeccapurple;
+    border-width: 3px 0;
+    border-radius: 5px;
+    margin: 30px 0;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.calculator-available-points {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.calculator-stats {
+    display: flex;
+    flex-direction: row;
+}
+
+.calculator-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50px;
+    height: 100px;
+}
+
+.calculator-stat-name {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.calculator-arrow-button {
+    width: 10px;
+    height: 10px;
+    border: solid rebeccapurple;
+    border-width: 0 5px 5px 0;
+    padding: 3px;
+}
+
+.calculator-increase-stat {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.calculator-decrease-stat {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.calculator-stat-points {
+
+}
