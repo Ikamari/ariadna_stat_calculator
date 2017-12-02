@@ -1,7 +1,7 @@
 // React
 import React from "react";
 
-const stat = (increase, decrease, statName, statPoints, test = () => {}) => {
+const stat = (increase, decrease, statName, statPoints) => {
     return (
         <div className="calculator-stat">
             <div className="calculator-stat-name">
@@ -29,7 +29,10 @@ const CalculatorGUI = (props) => {
                 {stat(increase, decrease, "det", stats["det"])}
                 {stat(increase, decrease, "mag", stats["mag"])}
             </div>
-            <div className="calculator-available-points">Доступные очки: {stats.unused}</div>
+            <div className="calculator-available-points">
+                Нераспределенные очки: {stats.unused}<br/>
+                Количество очков: {stats.initial}
+            </div>
         </div>
             <div className="points-manipulation-block">
                 Очки:

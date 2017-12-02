@@ -8,6 +8,7 @@ export default class Calculator extends Component {
         super(props);
         this.state = {
             unused: 44,
+            initial: 50,
             str: 1,
             ref: 1,
             per: 1,
@@ -19,17 +20,21 @@ export default class Calculator extends Component {
 
     addPoints(points) {
         let currentPoints = this.state["unused"];
+        let initialPoints = this.state["initial"];
         this.setState({
             ...this.state,
-            unused: currentPoints + Number(points)
+            unused: currentPoints + Number(points),
+            initial: initialPoints + Number(points)
         })
     }
 
     removePoints(points) {
         let currentPoints = this.state["unused"];
+        let initialPoints = this.state["initial"];
         this.setState({
             ...this.state,
-            unused: currentPoints - Number(points)
+            unused: currentPoints - Number(points),
+            initial: initialPoints - Number(points)
         })
     }
 
