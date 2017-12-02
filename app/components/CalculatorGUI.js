@@ -17,7 +17,7 @@ const stat = (increase, decrease, statName, statPoints, test = () => {}) => {
 };
 
 const CalculatorGUI = (props) => {
-    const { increase, decrease, add, stats} = props;
+    const { increase, decrease, add, remove, stats} = props;
     return (
         <div>
         <div className="calculator">
@@ -31,13 +31,17 @@ const CalculatorGUI = (props) => {
             </div>
             <div className="calculator-available-points">Доступные очки: {stats.unused}</div>
         </div>
-            <div className="add-points-block">
+            <div className="points-manipulation-block">
                 Очки:
-                <input type="number" min="0" className="add-points-input" id="addPointsInput"/>
+                <input type="number" min="0" className="points-manipulation-input" id="pointsInput"/>
                 <div
-                    className="add-points-button"
-                    onClick={() => add(document.getElementById("addPointsInput").value)}
+                    className="points-manipulation-button"
+                    onClick={() => add(document.getElementById("pointsInput").value)}
                 >Добавить</div>
+                <div
+                    className="points-manipulation-button"
+                    onClick={() => remove(document.getElementById("pointsInput").value)}
+                >Убрать</div>
             </div>
         </div>
     )
