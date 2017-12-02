@@ -55,3 +55,50 @@
 .calculator-stat-points {
 
 }
+
+.add-points-block {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 220px;
+    border: solid rebeccapurple;
+    border-width: 3px 0;
+    border-radius: 5px;
+    margin: 30px 0;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-points-input {
+    width: 40px;
+    height: 30px;
+    margin: 0 10px;
+    border: solid rebeccapurple;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    border-width: 3px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.add-points-button:hover {
+    background-color: mediumpurple;
+}
+
+.add-points-button {
+    display: block;
+    width: 80px;
+    /* margin: 20px auto; */
+    font-size: 14px;
+    line-height: 35px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: center;
+    color: white;
+    background-color: rebeccapurple;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}

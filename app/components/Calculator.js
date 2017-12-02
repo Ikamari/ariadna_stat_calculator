@@ -17,6 +17,14 @@ export default class Calculator extends Component {
         }
     }
 
+    addPoints(points) {
+        let currentPoints = this.state["unused"];
+        this.setState({
+            ...this.state,
+            unused: currentPoints + Number(points)
+        })
+    }
+
     decreasePoints(stat) {
         let points = this.state[stat];
         if(points > 1) {
@@ -55,7 +63,12 @@ export default class Calculator extends Component {
 
     render() {
         return(
-            <CalculatorGUI increase={(statName) => this.increasePoints(statName)} decrease={(statName) => this.decreasePoints(statName)} stats={this.state}/>
+            <CalculatorGUI
+                increase={(statName) => this.increasePoints(statName)}
+                decrease={(statName) => this.decreasePoints(statName)}
+                add={(points) => this.addPoints(points)}
+                stats={this.state}
+            />
         )
     }
 }
