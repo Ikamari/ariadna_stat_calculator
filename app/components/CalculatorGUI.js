@@ -23,10 +23,10 @@ const CalculatorGUI = (props) => {
         <div className="calculator">
             <div className="calculator-stats">
                 {stat(increase, decrease, "str", stats["str"])}
-                {stat(increase, decrease, "ref", stats["ref"])}
                 {stat(increase, decrease, "per", stats["per"])}
-                {stat(increase, decrease, "int", stats["int"])}
+                {stat(increase, decrease, "ref", stats["ref"])}
                 {stat(increase, decrease, "det", stats["det"])}
+                {stat(increase, decrease, "int", stats["int"])}
                 {stat(increase, decrease, "mag", stats["mag"])}
             </div>
             <div className="calculator-available-points">

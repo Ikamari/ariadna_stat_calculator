@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 // Components
 import CalculatorGUI from "./CalculatorGUI"
+import WikiCode from './WikiCode'
 
 export default class Calculator extends Component {
     constructor(props){
@@ -76,13 +77,23 @@ export default class Calculator extends Component {
 
     render() {
         return(
-            <CalculatorGUI
-                increase={(statName) => this.increasePoints(statName)}
-                decrease={(statName) => this.decreasePoints(statName)}
-                add={(points) => this.addPoints(points)}
-                remove={(points) => this.removePoints(points)}
-                stats={this.state}
-            />
+            <div>
+                <CalculatorGUI
+                    increase={(statName) => this.increasePoints(statName)}
+                    decrease={(statName) => this.decreasePoints(statName)}
+                    add={(points) => this.addPoints(points)}
+                    remove={(points) => this.removePoints(points)}
+                    stats={this.state}
+                />
+                <WikiCode
+                    str = {this.state.str}
+                    per = {this.state.per}
+                    refl = {this.state.ref}
+                    det = {this.state.det}
+                    int = {this.state.int}
+                    mag = {this.state.mag}
+                />
+            </div>
         )
     }
 }
