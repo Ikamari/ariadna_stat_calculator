@@ -107,3 +107,97 @@
 .calculator-arrow-button:hover {
     border-color: mediumpurple;
 }
+
+.wiki-infobox {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 120px;
+    border: solid rebeccapurple;
+    border-width: 0 3px;
+    border-radius: 5px;
+    margin: 30px auto;
+}
+
+.wiki-infobox-style-select {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.infobox-style-option {
+    display: block;
+    position: relative;
+    padding-left: 40px;
+    margin-right: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.infobox-style-option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.infobox-style-option span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.infobox-style-option:hover input ~ span {
+    background-color: #ccc;
+}
+
+.infobox-style-option input:checked ~ span {
+    background-color: rebeccapurple;
+}
+
+.infobox-style-option span:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.infobox-style-option input:checked ~ .span:after {
+    display: block;
+}
+
+.infobox-style-option span:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.wiki-infobox-info {
+    width: 100%;
+    margin-bottom: 6px;
+    text-align: center;
+    font-size: 16px;
+    font-family: Consolas, sans-serif;
+    background-color: rebeccapurple;
+    color: white;
+}
+
+.wiki-infobox-code {
+    display: block;
+    width: 80%;
+    white-space: pre;
+    margin: 0 auto;
+    font-size: 12px;
+    font-family: Consolas, sans-serif;
+}

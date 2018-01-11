@@ -1,1 +1,1 @@
-export default (str, per, ref, det, int, mag) => (`{{ГексОчки|${str}|${per}|${ref}|${det}|${int}|${int}}}`)
+export default (str, per, ref, det, int, mag) => (`{{ГексОчки|${str}|${per}|${ref}|${det}|${int}|${mag}}}`)
