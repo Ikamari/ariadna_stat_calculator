@@ -1,8 +1,9 @@
 // React
-import React, { Component } from "react";
+import React, { Component } from 'react'
 // Components
-import CalculatorGUI from "./CalculatorGUI"
+import CalculatorGUI from './CalculatorGUI'
 import WikiCode from './WikiCode'
+import Warnings from  './Warnings'
 
 export default class Calculator extends Component {
     constructor(props){
@@ -85,13 +86,16 @@ export default class Calculator extends Component {
                     remove={(points) => this.removePoints(points)}
                     stats={this.state}
                 />
+                <Warnings
+                    stats={this.state}
+                />
                 <WikiCode
-                    str = {this.state.str}
-                    per = {this.state.per}
-                    refl = {this.state.ref}
-                    det = {this.state.det}
-                    int = {this.state.int}
-                    mag = {this.state.mag}
+                    str={this.state.str}
+                    per={this.state.per}
+                    refl={this.state.ref}
+                    det={this.state.det}
+                    int={this.state.int}
+                    mag={this.state.mag}
                 />
             </div>
         )
