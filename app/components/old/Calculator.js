@@ -2,8 +2,8 @@
 import React, { Component } from 'react'
 // Components
 import CalculatorGUI from './CalculatorGUI'
-import WikiCode from './WikiCode'
-import Warnings from  './Warnings'
+import WikiCode from '../WikiCode'
+import Warnings from  '../Warnings'
 
 export default class Calculator extends Component {
     constructor(props){
