@@ -1,6 +1,7 @@
 export default () => ({
     elements: 4,
-    label: [
+    label: 'Сосуд',
+    statLabel: [
         'Физ. сила',
         'Выносливость',
         'Восприятие',

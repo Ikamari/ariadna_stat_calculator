@@ -30,15 +30,15 @@ export default  class App extends Component {
 
     render() {
         return(
-            <div className="app">
+            <div className='app'>
                 <div className='centered'>
                     <Calculator
-                        stats={VesselStats()}
+                        statsData={VesselStats()}
                         getPoints={() => this.getPoints('vessel')}
                         editPoints={(value) => this.editPoints('vessel', value)}
                     />
                     <Calculator
-                        stats={EssenceStats()}
+                        statsData={EssenceStats()}
                         getPoints={() => this.getPoints('essence')}
                         editPoints={(value) => this.editPoints('essence', value)}
                     />

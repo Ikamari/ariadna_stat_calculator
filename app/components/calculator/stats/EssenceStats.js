@@ -1,6 +1,7 @@
 export default () => ({
     elements: 4,
-    label: [
+    label: 'Сущность',
+    statLabel: [
         'Дух',
         'Сила воли',
         'Эрудированность',
