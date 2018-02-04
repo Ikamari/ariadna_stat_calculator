@@ -28,6 +28,7 @@ const CalculatorGUI = (props) => {
 
     return (
         <div className='app-block-wrapper app-centered app-sharp-border app-horizontal-border app-mt20px app-mb20px app-p5px'>
+            <div className='app-centered-text app-text-bold app-mb10px'>{statsData.label}</div>
             <div className='app-block app-justified-content'>
                 {Object.keys(stats).map((stat, num) => (
                     statElement(increment, decrement, stat, stats[stat], statsData.color[num])

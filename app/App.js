@@ -31,7 +31,7 @@ export default  class App extends Component {
     render() {
         return(
             <div className='app'>
-                <div className='centered'>
+                <div className='app-block-inline app-centered app-w100per app-centered-content'>
                     <Calculator
                         statsData={VesselStats()}
                         getPoints={() => this.getPoints('vessel')}

@@ -53,7 +53,7 @@ export default class Calculator extends Component {
 
     render() {
         return(
-            <div>
+            <div className='app-mr20px'>
                 <GUI
                     stats={this.state}
                     statsData={this.props.statsData}
