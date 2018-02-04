@@ -7,7 +7,7 @@ export default () => ({
         'Эрудированность',
         'Решительность'
     ],
-    style: [
+    color: [
         'purple',
         'purple',
         'blue',

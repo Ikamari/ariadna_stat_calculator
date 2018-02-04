@@ -1,238 +1,177 @@
-.calculator {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    border: solid rebeccapurple;
-    border-width: 3px 0;
-    border-radius: 5px;
-    margin: 30px 0;
+/******************************************/
+/*                Main                    */
+/******************************************/
+
+.app {
     font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.app-block-wrapper {
+    width: 250px;
+}
+
+.app-block {
+    display: flex;
+}
+
+.app-block-inline {
+    display: inline-flex;
+}
+
+.app-button {
+    border-color: rebeccapurple;
+}
+
+.app-button:hover {
+    border-color: mediumpurple;
+}
+
+/******************************************/
+/*              Positioning               */
+/******************************************/
+
+.app-centered {
     margin-left: auto;
     margin-right: auto;
 }
 
-.calculator-available-points {
+.app-centered-flex-column {
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-centered-content {
+    justify-content: center;
+}
+
+.app-justified-content {
+    justify-content: space-around;
+}
+
+.app-centered-text {
+    display: block;
+    width: 100%;
     text-align: center;
+}
+
+/******************************************/
+/*               Paddings                 */
+/******************************************/
+
+.app-p5px {
+    padding: 5px;
+}
+
+/******************************************/
+/*               Margins                  */
+/******************************************/
+
+.app-ml6px {
+    margin-left: 6px;
+}
+
+.app-mt5px {
+    margin-top: 5px;
+}
+
+.app-mb5px {
+    margin-bottom: 5px;
+}
+
+.app-mt10px {
     margin-top: 10px;
 }
 
-.calculator-stats {
-    display: flex;
-    flex-direction: row;
-}
-
-.calculator-stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50px;
-    height: 100px;
-}
-
-.calculator-stat-name {
-    text-transform: uppercase;
+.app-mb10px {
     margin-bottom: 10px;
 }
 
-.calculator-arrow-button {
+.app-mt20px {
+    margin-top: 20px;
+}
+
+.app-mb20px {
+    margin-bottom: 20px;
+}
+
+/******************************************/
+/*                  Text                  */
+/******************************************/
+
+.app-lh20px {
+    line-height: 20px;
+}
+
+.app-text-uppercase {
+    text-transform: uppercase;
+}
+
+/******************************************/
+/*               Blocks                   */
+/******************************************/
+
+.app-sharp-border {
+    border: 3px solid rebeccapurple;
+    border-radius: 5px;
+}
+
+.app-vertical-border {
+    border-width: 0 3px;
+}
+
+.app-horizontal-border {
+    border-width: 3px 0;
+}
+
+/******************************************/
+/*               Arrows                   */
+/******************************************/
+
+.app-arrow-button {
     width: 10px;
     height: 10px;
-    border: solid rebeccapurple;
+    border: solid black;
     border-width: 0 5px 5px 0;
     padding: 3px;
     transition-duration: 0.4s;
 }
 
-.calculator-increase-stat {
+.app-arrow-button-up {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
 }
 
-.calculator-decrease-stat {
+.app-arrow-button-down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
 
-.calculator-stat-points {
-
+.app-arrow-button-left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
 }
 
-.points-manipulation-block {
-    display: flex;
-    flex-direction: row;
-    height: 50px;
-    width: 300px;
-    border: solid rebeccapurple;
-    border-width: 3px 0;
-    border-radius: 5px;
-    margin: 30px 0;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-    justify-content: center;
+.app-arrow-button-right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
 }
 
-.points-manipulation-input {
-    width: 40px;
-    height: 30px;
-    margin: 0 10px;
-    border: solid rebeccapurple;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    border-width: 3px;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 18px;
+/******************************************/
+/*               Colors                   */
+/******************************************/
+
+.app-green-border {
+    border-color: limegreen;
 }
 
-.points-manipulation-button:hover {
-    background-color: mediumpurple;
+.app-blue-border {
+    border-color: deepskyblue;
 }
 
-.points-manipulation-button {
-    display: block;
-    width: 100px;
-    margin-right: 5px;
-    font-size: 14px;
-    line-height: 35px;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    text-align: center;
-    color: white;
-    background-color: rebeccapurple;
-    border: none;
-    cursor: pointer;
-    transition-duration: 0.4s;
+.app-red-border {
+    border-color: red;
 }
 
-.calculator-arrow-button:hover {
-    border-color: mediumpurple;
-}
-
-.wiki-infobox {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    height: 120px;
-    border: solid rebeccapurple;
-    border-width: 0 3px;
-    border-radius: 5px;
-    margin: 30px auto;
-}
-
-.wiki-infobox-style-select {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.infobox-style-option {
-    display: block;
-    position: relative;
-    padding-left: 40px;
-    margin-right: 10px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    font-size: 16px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.infobox-style-option input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.infobox-style-option span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border-radius: 50%;
-}
-
-.infobox-style-option:hover input ~ span {
-    background-color: #ccc;
-}
-
-.infobox-style-option input:checked ~ span {
-    background-color: rebeccapurple;
-}
-
-.infobox-style-option span:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-.infobox-style-option input:checked ~ .span:after {
-    display: block;
-}
-
-.infobox-style-option span:after {
-    top: 9px;
-    left: 9px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: white;
-}
-
-.wiki-infobox-info {
-    width: 100%;
-    margin-bottom: 6px;
-    text-align: center;
-    font-size: 16px;
-    font-family: Consolas, sans-serif;
-    background-color: rebeccapurple;
-    color: white;
-}
-
-.wiki-infobox-code {
-    display: block;
-    width: 80%;
-    white-space: pre;
-    margin: 0 auto;
-    font-size: 12px;
-    font-family: Consolas, sans-serif;
-}
-
-.warning-infobox {
-    display: flex;
-    flex-direction: column;
-    width: 550px;
-    height: 120px;
-    margin: 30px auto;
-}
-
-.warning-infobox-element {
-    display: flex;
-    height: 40px;
-    align-items: center;
-}
-
-.warning-infobox-element-symbol {
-    display: inline-block;
-    height: 24px;
-    width: 24px;
-    margin-right: 4px;
-    font-size: 20px;
-    line-height: 24px;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    text-align: center;
-    color: white;
-    border-radius: 20px;
-    background-color: red;
-    font-weight: bold;
-}
-
-.warning-infobox-element-text {
-    display: inline-block;
-    font-size: 16px;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+.app-purple-border {
+    border-color: rebeccapurple;
 }

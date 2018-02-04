@@ -58,6 +58,7 @@ export default class Calculator extends Component {
                     stats={this.state}
                     statsData={this.props.statsData}
                     initialPoints={this.props.getPoints()}
+                    editPoints={(value) => this.props.editPoints(value)}
                     increment={(statName) => this.incrementStatPoint(statName)}
                     decrement={(statName) => this.decrementStatPoint(statName)}
                 />

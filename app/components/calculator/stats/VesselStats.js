@@ -7,7 +7,7 @@ export default () => ({
         'Восприятие',
         'Рефлексы'
     ],
-    style: [
+    color: [
         'red',
         'red',
         'green',

@@ -1,40 +1,45 @@
 // React
-import React from "react";
+import React from 'react';
+// Components
+import PointController from '../PointController'
 
-const statElement = (increment, decrement, statName, statPoints) => {
+const statElement = (increment, decrement, statName, statPoints, color) => {
     return (
-        <div className="calculator-stat" key={`calc-stat-element-${statName}`}>
-            <div className="calculator-stat-name">
-                {statName}
-            </div>
-            <div className="calculator-arrow-button calculator-increase-stat" onClick={() => increment(statName)}/>
-            <div className="calculator-stat-points">
-                {statPoints}
-            </div>
-            <div className="calculator-arrow-button calculator-decrease-stat" onClick={() => decrement(statName)}/>
+        <div className='app-block app-centered-flex-column' key={`calc-stat-element-${statName}`}>
+            <div className='app-text-uppercase'>{statName}</div>
+            <div
+                className={`app-arrow-button app-arrow-button-up app-${color}-border app-mt10px`}
+                onClick={() => increment(statName)}
+            />
+            <div>{statPoints}</div>
+            <div
+                className={`app-arrow-button app-arrow-button-down app-${color}-border app-mb10px`}
+                onClick={() => decrement(statName)}
+            />
         </div>
     )
 };
 
 const CalculatorGUI = (props) => {
     let stats = Object.assign({}, props.stats)
-    const { increment, decrement, initialPoints, statsData} = props
+    const { increment, decrement, initialPoints, statsData, editPoints} = props
     const usedPoints = props.stats.used
     delete stats.used
 
     return (
-        <div>
-            <div className="calculator">
-                <div className="calculator-stats">
-                    {Object.keys(stats).map((stat) => (
-                        statElement(increment, decrement, stat, stats[stat])
-                    ))}
-                </div>
-                <div className="calculator-available-points">
-                    Нераспределенные очки: {initialPoints - usedPoints}<br/>
-                    Количество очков: {initialPoints}
-                </div>
+        <div className='app-block-wrapper app-centered app-sharp-border app-horizontal-border app-mt20px app-mb20px app-p5px'>
+            <div className='app-block app-justified-content'>
+                {Object.keys(stats).map((stat, num) => (
+                    statElement(increment, decrement, stat, stats[stat], statsData.color[num])
+                ))}
             </div>
+            <div className='app-centered-text'>
+                Нераспределенные очки: {initialPoints - usedPoints}<br/>
+            </div>
+            <PointController
+                initialPoints={initialPoints}
+                editPoints={(value) => editPoints(value)}
+            />
         </div>
     )
 };

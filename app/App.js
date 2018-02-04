@@ -42,6 +42,7 @@ export default  class App extends Component {
                         getPoints={() => this.getPoints('essence')}
                         editPoints={(value) => this.editPoints('essence', value)}
                     />
+
                 </div>
             </div>
         )
