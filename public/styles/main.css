@@ -19,11 +19,17 @@
 }
 
 .app-button {
-    border-color: rebeccapurple;
+    display: block;
+    height: 25px;
+    text-align: center;
+    background-color: rebeccapurple;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.3s;
 }
 
 .app-button:hover {
-    border-color: mediumpurple;
+    background-color: mediumpurple;
 }
 
 /******************************************/
@@ -142,6 +148,14 @@
     font-weight: bold;
 }
 
+.app-text-start-uppercase {
+    text-transform: capitalize;
+}
+
+.app-font-consolas {
+    font-family: Consolas, 'serif';
+}
+
 /******************************************/
 /*               Blocks                   */
 /******************************************/
@@ -228,7 +242,11 @@
     border: solid black;
     border-width: 0 5px 5px 0;
     padding: 3px;
-    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.app-arrow-button:hover {
+    opacity: 0.55;
 }
 
 .app-arrow-button-up {

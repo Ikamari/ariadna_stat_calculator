@@ -24,6 +24,12 @@ export default class Calculator extends Component {
         })
     }
 
+    componentDidUpdate() {
+        let stats = Object.assign({}, this.state)
+        delete stats.used
+        this.props.sendStats(stats)
+    }
+
     decrementStatPoint(stat) {
         const statPoints = this.state[stat]
         if (statPoints > 1) {
@@ -42,13 +48,23 @@ export default class Calculator extends Component {
         const initialPoints = this.props.getPoints()
         const price = calculatePrice(statPoints, 1)
 
-        console.log(statPoints, usedPoints, price, stat);
         if (initialPoints >= usedPoints + price) {
             this.setState({
                 used: usedPoints + price,
                 [stat]: statPoints + 1
             })
         }
+    }
+
+    resetStatPoints() {
+        const statNames = this.props.statsData.name
+        let stats = {}
+        statNames.map((stat) => {stats[stat] = 1})
+
+        this.setState({
+            used: 4,
+            ...stats
+        })
     }
 
     render() {
@@ -59,6 +75,8 @@ export default class Calculator extends Component {
                     statsData={this.props.statsData}
                     initialPoints={this.props.getPoints()}
                     editPoints={(value) => this.props.editPoints(value)}
+                    restorePoints={() => this.props.restorePoints()}
+                    resetStatPoints={() => this.resetStatPoints()}
                     increment={(statName) => this.incrementStatPoint(statName)}
                     decrement={(statName) => this.decrementStatPoint(statName)}
                 />

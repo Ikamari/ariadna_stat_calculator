@@ -1,7 +1,7 @@
 // React
 import React from 'react';
 // Components
-import PointController from '../PointController'
+import PointController from './PointController'
 
 const statElement = (increment, decrement, statName, statPoints, color) => {
     return (
@@ -22,7 +22,7 @@ const statElement = (increment, decrement, statName, statPoints, color) => {
 
 const CalculatorGUI = (props) => {
     let stats = Object.assign({}, props.stats)
-    const { increment, decrement, initialPoints, statsData, editPoints} = props
+    const { increment, decrement, initialPoints, statsData, editPoints, restorePoints, resetStatPoints} = props
     const usedPoints = props.stats.used
     delete stats.used
 
@@ -37,6 +37,8 @@ const CalculatorGUI = (props) => {
             <div className='app-centered-text'>
                 Нераспределенные очки: {initialPoints - usedPoints}<br/>
             </div>
+            <div className='app-button app-mb10px' onClick={() => resetStatPoints()}>Сбросить статы</div>
+            <div className='app-button' onClick={() => restorePoints()}>Сбросить очки</div>
             <PointController
                 initialPoints={initialPoints}
                 editPoints={(value) => editPoints(value)}
