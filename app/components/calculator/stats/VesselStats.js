@@ -17,6 +17,6 @@ export default () => ({
         'str',
         'end',
         'per',
-        'refl'
+        'ref'
     ]
 })

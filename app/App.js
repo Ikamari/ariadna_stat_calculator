@@ -1,7 +1,8 @@
 // React
 import React, { Component } from 'react';
 // Components
-import Calculator from './components/calculator/Calculator';
+import Calculator from './components/calculator/Calculator'
+import Heritages from './components/heritages/Heritages'
 // Calculator stats
 import VesselStats from './components/calculator/stats/VesselStats'
 import EssenceStats from './components/calculator/stats/EssenceStats'
@@ -14,6 +15,13 @@ export default  class App extends Component {
             vesselPoints: 0,
             essencePoints: 0
         }
+    }
+
+    setPoints(vesselPoints, essencePoints) {
+        this.setState({
+            vesselPoints,
+            essencePoints
+        })
     }
 
     editPoints(categoryName, value) {
@@ -31,6 +39,9 @@ export default  class App extends Component {
     render() {
         return(
             <div className='app'>
+                <Heritages
+                    setPoints={(vesselPoints, essencePoints) => this.setPoints(vesselPoints, essencePoints)}
+                />
                 <div className='app-block-inline app-centered app-w100per app-centered-content'>
                     <Calculator
                         statsData={VesselStats()}
@@ -42,8 +53,8 @@ export default  class App extends Component {
                         getPoints={() => this.getPoints('essence')}
                         editPoints={(value) => this.editPoints('essence', value)}
                     />
-
                 </div>
+                <div className='app-centered-text'>К сожалению, вики кода пока что нету, как и предупреждений.</div>
             </div>
         )
     }

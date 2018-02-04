@@ -14,8 +14,8 @@ export default () => ({
         'blue'
     ],
     name: [
-        'soul',
-        'will',
+        'spr',
+        'wil',
         'int',
         'det'
     ]

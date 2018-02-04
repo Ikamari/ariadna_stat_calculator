@@ -62,6 +62,18 @@
     width: 100%;
 }
 
+.app-w150px {
+    width: 150px;
+}
+
+.app-w200px {
+    width: 200px;
+}
+
+.app-w530px {
+    width: 530px;
+}
+
 /******************************************/
 /*               Paddings                 */
 /******************************************/
@@ -84,6 +96,14 @@
 
 .app-mb5px {
     margin-bottom: 5px;
+}
+
+.app-ml5px {
+    margin-right: 5px;
+}
+
+.app-mr5px {
+    margin-right: 5px;
 }
 
 .app-mt10px {
@@ -137,6 +157,65 @@
 
 .app-horizontal-border {
     border-width: 3px 0;
+}
+
+/******************************************/
+/*            Radio buttons               */
+/******************************************/
+
+
+.app-radio-button {
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.app-radio-button input {
+    position: absolute;
+    opacity: 0;
+}
+
+.app-radio-button span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.app-radio-button:hover input ~ span {
+    background-color: #ccc;
+}
+
+.app-radio-button input:checked ~ span {
+    background-color: rebeccapurple;
+}
+
+.app-radio-button span:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.app-radio-button input:checked ~ .span:after {
+    display: block;
+}
+
+.app-radio-button span:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
 }
 
 /******************************************/
