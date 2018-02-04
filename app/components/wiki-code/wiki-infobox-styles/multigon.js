@@ -1,1 +1,1 @@
-export default (props) => (`{{ОктаОчки${Object.keys(props).map((prop) => ('|' + props[prop])).join('')}}}`)
+export default (props) => (`{{ОктОчки${Object.keys(props).map((prop) => ('|' + props[prop])).join('')}}}`)

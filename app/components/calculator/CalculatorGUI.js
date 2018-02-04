@@ -3,10 +3,13 @@ import React from 'react';
 // Components
 import PointController from './PointController'
 
-const statElement = (increment, decrement, statName, statPoints, color) => {
+const statElement = (increment, decrement, statName, statPoints, color, tip) => {
     return (
         <div className='app-block app-centered-flex-column' key={`calc-stat-element-${statName}`}>
-            <div className='app-text-uppercase'>{statName}</div>
+            <div className='app-text-uppercase app-tooltip'>
+                {statName}
+                <span className='app-tooltip-text'>{tip}</span>
+            </div>
             <div
                 className={`app-arrow-button app-arrow-button-up app-${color}-border app-mt10px`}
                 onClick={() => increment(statName)}
@@ -31,14 +34,14 @@ const CalculatorGUI = (props) => {
             <div className='app-centered-text app-text-bold app-mb10px'>{statsData.label}</div>
             <div className='app-block app-justified-content'>
                 {Object.keys(stats).map((stat, num) => (
-                    statElement(increment, decrement, stat, stats[stat], statsData.color[num])
+                    statElement(increment, decrement, stat, stats[stat], statsData.color[num], statsData.statLabel[num])
                 ))}
             </div>
             <div className='app-centered-text'>
                 Нераспределенные очки: {initialPoints - usedPoints}<br/>
             </div>
-            <div className='app-button app-mb10px' onClick={() => resetStatPoints()}>Сбросить статы</div>
-            <div className='app-button' onClick={() => restorePoints()}>Сбросить очки</div>
+            <div className='app-button app-mt10px app-mb10px' onClick={() => resetStatPoints()}>Сбросить статы</div>
+            <div className='app-button app-mb10px' onClick={() => restorePoints()}>Сбросить очки</div>
             <PointController
                 initialPoints={initialPoints}
                 editPoints={(value) => editPoints(value)}
